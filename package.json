@@ -1,0 +1,29 @@
+{
+  "name": "contributor.ninja",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-client": "^1.9.0-0",
+    "classnames": "^2.2.5",
+    "graphql-tag": "^2.4.2",
+    "markdown": "^0.5.0",
+    "material-ui": "^0.18.5",
+    "react": "^15.6.1",
+    "react-apollo": "^1.4.9",
+    "react-dnd": "^2.4.0",
+    "react-dnd-html5-backend": "^2.4.1",
+    "react-dom": "^15.6.1",
+    "react-popper": "^0.7.0",
+    "react-swipeable-views": "^0.12.5",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "deploy": "REACT_APP_GRAPHQL_ENDPOINT=https://api.contributor.ninja/graphql npm run build && s3_website cfg apply && s3_website push"
+  }
+}

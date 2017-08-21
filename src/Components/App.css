@@ -1,0 +1,325 @@
+/* ------ GENERIQUE ------ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #404040;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p,
+h3,
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ------ FIN GENERIQUE ------ */
+
+/* ------ CONTENT HOME PAGE ------ */
+
+.content {
+  max-height: 100vh;
+  position: relative;
+}
+
+section.content .cards {
+  white-space: nowrap;
+}
+
+.column {
+  width: 350px;
+  height: 96vh;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.column-header {
+  background-color: #512da8;
+  padding: 7px;
+  color: white;
+}
+
+.issues {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 90vh;
+}
+
+.issue-placeholder {
+  height: 100px;
+}
+
+.issues .issue .card-text {
+  white-space: initial;
+}
+
+.issues .issue .card-text-description {
+  height: auto !important;
+  text-overflow: none !important;
+  white-space: initial !important;
+}
+
+.text-placeholder {
+  background: lightgray !important;
+  /* border-radius: 15%; */
+  height: 50px !important;
+  /* hide text */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-placeholder-darker {
+  background: gray !important;
+  /* border-radius: 15%; */
+  height: 30px;
+  /* hide text */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.column-add {
+  width: 200px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.popper {
+  background: #222;
+  color: white;
+  width: 150px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 5px;
+}
+
+.popper .popper__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+}
+
+.popper[data-placement^="top"] {
+  margin-bottom: 5px;
+}
+
+.popper[data-placement^="top"] .popper__arrow {
+  border-width: 5px 5px 0 5px;
+  border-color: #222 transparent transparent transparent;
+  bottom: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.popper[data-placement^="bottom"] {
+  margin-top: 5px;
+}
+
+.popper[data-placement^="bottom"] .popper__arrow {
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #222 transparent;
+  top: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.popper[data-placement^="right"] {
+  margin-left: 5px;
+}
+
+.popper[data-placement^="right"] .popper__arrow {
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #222 transparent transparent;
+  left: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.popper[data-placement^="left"] {
+  margin-right: 5px;
+}
+
+.popper[data-placement^="left"] .popper__arrow {
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #222;
+  right: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.search-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+}
+
+/* ========== Main Styles ========== */
+
+/* ========== Page header (Top bar) ========== */
+
+.page-footer {
+  width: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgb(81, 45, 168);
+  bottom: 0;
+  z-index: 97;
+  height: 64px;
+  max-height: 64px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Search bar (header) */
+
+.searchBarMain {
+  background: #fff;
+  width: 80%;
+  max-width: 680px;
+  margin: 0 auto;
+  height: 42px;
+  margin-bottom: 11px;
+  border-radius: 2px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.14);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.searchBarMain i.searchBarSearchIcon {
+  height: 100%;
+  line-height: 42px;
+  float: left;
+  width: 52px;
+  text-align: center;
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.searchBarMain input#searchBarInput {
+  height: 42px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  background: transparent;
+  width: calc(100% - 52px);
+  outline: none;
+  padding-right: 32px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.76);
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.searchBarMain i.clearSearchBarField {
+  position: absolute;
+  right: 12px;
+  bottom: 11px;
+  color: rgba(0, 0, 0, 0.84);
+  display: none;
+  font-size: 20px;
+}
+
+.column-blur {
+  -webkit-filter: blur(2px); /* Safari */
+  filter: blur(2px);
+}
+
+.login {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  text-align: center;
+  display: flex;
+  z-index: 999;
+  align-items: center;
+}
+
+.login-form {
+  margin: 0 auto;
+}
+
+.btn-github {
+  background-color: rgb(81, 45, 168);
+  background-image: url("/github.svg");
+}
+
+.btn-github:hover {
+  background-color: #281557;
+}
+
+.btn-si {
+  background-position: 1em;
+  background-repeat: no-repeat;
+  background-size: 2em;
+  border-radius: 0.5em;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  height: 4em;
+  line-height: 1em;
+  padding: 0 2em 0 4em;
+  text-decoration: none;
+  transition: all 0.5s;
+}
