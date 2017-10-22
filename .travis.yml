@@ -1,8 +1,12 @@
-language: ruby
-rvm:
-  - 2.1
-install: gem install s3_website
-script: echo ok
+language: node_js
+node_js:
+  - "8"
+
+before_install:
+  - gem install s3_website
+
+script: npm run build
+
 after_success: s3_website push
 branches:
   only:
