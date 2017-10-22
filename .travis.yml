@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.1
+install: gem install s3_website
+script: echo ok
+after_success: s3_website push
+branches:
+  only:
+    - master
