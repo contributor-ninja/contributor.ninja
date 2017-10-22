@@ -84,7 +84,7 @@ export default function({loaded, columns, isConnected, isMobile}) {
                   {column.language.name}
                 </Subheader>
                 <div>
-                  <Issue issues={column.issues} loaded={loaded} />
+                  <Issue issues={column.issues} loaded={loaded} parentClasses={classNames('column', {['column-blur']: (!isConnected && index > 1)})} />
                 </div>
               </List>
             </span>

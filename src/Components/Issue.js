@@ -37,11 +37,15 @@ const style = {
   marginTop: '-28px',
 };
 
-export default function Issue({loaded, issues}) {
+export default function Issue({loaded, issues, parentClasses}) {
   const avatar = src => loaded ? <Avatar src={src} /> : <Avatar />;
 
   function createOpen(issue) {
     return () => {
+      // Do not allow user to open issue on blur columns
+      if (parentClasses.indexOf('column-blur') !== -1) {
+        return;
+      }
       window.ga('send', 'event', 'issue', 'opened', issue.title);
       window.open(issue.html_url);
     };
