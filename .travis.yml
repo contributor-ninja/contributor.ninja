@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "8"
+env:
+  - CI=false
 
 before_install:
   - gem install s3_website
