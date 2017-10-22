@@ -5,7 +5,9 @@ node_js:
 before_install:
   - gem install s3_website
 
-script: CI=false npm run build
+script: 
+  - unset CI
+  - npm run build
 
 after_success: s3_website push
 branches:
