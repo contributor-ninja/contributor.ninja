@@ -1,2 +1,3 @@
-# beta.contributor.ninja
-The next version of contributor.ninja
+# contributor.ninja
+
+Frontend for contributor.ninja.
