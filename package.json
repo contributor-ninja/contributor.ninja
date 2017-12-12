@@ -18,12 +18,13 @@
     "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
+    "http-server": "^0.10.0",
     "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "deploy": "REACT_APP_GRAPHQL_ENDPOINT=https://api.contributor.ninja/graphql npm run build && s3_website cfg apply && s3_website push"
+    "deploy": "make deploy"
   }
 }
