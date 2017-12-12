@@ -6,6 +6,7 @@ import {ApolloProvider} from 'react-apollo';
 import './App.css';
 import {Search} from './Search/index';
 import {SearchButton} from './Search/SearchButton';
+import {InfoButton} from './Info/Button';
 import Content from './Content';
 import {makeEmptyState} from '../utils';
 import {fetchIssuesQuery} from '../Queries/fetchIssues';
@@ -62,6 +63,10 @@ export default class App extends Component {
     }));
   }
 
+  handleInfoClick() {
+    window.open('https://github.com/contributor-ninja/contributor.ninja');
+  }
+
   componentDidMount() {
 
     apolloClient
@@ -85,6 +90,7 @@ export default class App extends Component {
 
         <MuiThemeProvider>
           <div>
+
             {/*
             {this.state.searchexpanded && <Search />}
 
@@ -95,6 +101,11 @@ export default class App extends Component {
             */}
 
             <Content {...this.state} isConnected={this.state.user.isConnected} isMobile={this.state.isMobile} />
+
+            <InfoButton
+              onClick={this.handleInfoClick}
+            />
+
           </div>
         </MuiThemeProvider>
 

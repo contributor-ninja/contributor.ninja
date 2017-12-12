@@ -199,11 +199,12 @@ section.content .cards {
   margin-right: 0;
 }
 
-.search-button {
+.search-button,
+.info-button {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 99;
+  z-index: 1000; /* 1 over the login layer */
 }
 
 /* ========== Main Styles ========== */
