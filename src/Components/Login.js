@@ -3,7 +3,7 @@ import React from 'react';
 const config = {
   clientId: 'ca87cadb1bbe9921c688',
   redirectUri: 'https://api.contributor.ninja/github/authenticate',
-  scope: ['user'],
+  scope: ['read:user'],
 };
 
 const authenticateLink =
