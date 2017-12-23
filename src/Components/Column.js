@@ -46,7 +46,7 @@ const style = {
   marginTop: '-28px',
 };
 
-const PopperExample = () =>
+const AddColumnTooltip = (
   <Manager>
     <Target style={style}>
       <FloatingActionButton
@@ -57,10 +57,16 @@ const PopperExample = () =>
       </FloatingActionButton>
     </Target>
     <Popper placement="bottom" className="popper">
-      Add a new column
+
+      <span>
+        Add a new column <br />
+        (soon)
+      </span>
+
       <Arrow className="popper__arrow" />
     </Popper>
-  </Manager>;
+  </Manager>
+);
 
 export default function({loaded, columns, isConnected, isMobile}) {
   const MobileSwipeableViews = isMobile ? SwipeableViews : 'div'
@@ -94,9 +100,9 @@ export default function({loaded, columns, isConnected, isMobile}) {
 
       <Card
         style={{marginLeft: 14, marginTop: 14}}
-        className="column column-add column-blur">
+        className={classNames('column', 'column-add', {['column-blur']: (!isConnected)})}>
         <div className="issues" style={{position: 'relative'}}>
-          {PopperExample()}
+          {AddColumnTooltip}
         </div>
       </Card>
     </MobileSwipeableViews>
