@@ -21,7 +21,7 @@ if (window.location.search !== "") {
 const networkInterface = createNetworkInterface({
   uri:
     process.env.REACT_APP_GRAPHQL_ENDPOINT ||
-    'https://api.contributor.ninja/graphql',
+    'https://staging-apiv2-index.contributor.ninja/query',
 });
 
 networkInterface.use([{
@@ -73,7 +73,7 @@ export default class App extends Component {
       .query({
         query: fetchIssuesQuery,
       })
-      .then(res => this.setState({ columns: res.data.columns, loaded: true }))
+      .then(res => this.setState({ columns: res.data.dashboard, loaded: true }))
       .catch(error => console.error(error));
 
     apolloClient
