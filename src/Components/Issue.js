@@ -47,7 +47,7 @@ export default function Issue({loaded, issues, parentClasses}) {
         return;
       }
       window.ga('send', 'event', 'issue', 'opened', issue.title);
-      window.open(issue.html_url);
+      window.open(issue.htmlUrl);
     };
   }
 
@@ -56,7 +56,7 @@ export default function Issue({loaded, issues, parentClasses}) {
       {issues.map(issue => (
         <div key={issue._id} className="issue">
           <ListItem
-            leftAvatar={avatar(issue._avatarUrl)}
+            leftAvatar={avatar(issue.avatarUrl)}
             key={issue._id}
             onTouchTap={createOpen(issue)}
             primaryText={

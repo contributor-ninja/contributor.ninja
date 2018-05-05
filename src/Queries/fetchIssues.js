@@ -2,18 +2,18 @@ import gql from 'graphql-tag';
 
 export const fetchIssuesQuery = gql`
 query fetchIssues {
-  columns {
+  dashboard {
     id
+
     language {
       name
     }
+
     issues {
       title
       body
-      _repo
-      _org
-      _avatarUrl
-      html_url
+      htmlUrl
+      avatarUrl
     }
   }
 }

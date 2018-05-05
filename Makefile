@@ -1,4 +1,4 @@
-REACT_APP_GRAPHQL_ENDPOINT = https://api.contributor.ninja/graphql
+REACT_APP_GRAPHQL_ENDPOINT = https://apiv2-index.contributor.ninja/query
 
 HTTP_SERVER = ./node_modules/.bin/http-server -c-1
 
