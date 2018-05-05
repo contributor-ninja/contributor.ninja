@@ -7,7 +7,7 @@ before_install:
 
 script: 
   - unset CI
-  - npm run build
+  - make build-prod
 
 after_success: s3_website push
 branches:
