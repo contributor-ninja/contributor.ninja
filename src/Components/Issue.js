@@ -56,7 +56,7 @@ export default function Issue({loaded, issues, parentClasses}) {
       {issues.map(issue => (
         <div key={issue._id} className="issue">
           <ListItem
-            leftAvatar={avatar(issue.user.avatar_url)}
+            leftAvatar={avatar(issue.user ? issue.user.avatarURL : "")}
             key={issue._id}
             onTouchTap={createOpen(issue)}
             primaryText={

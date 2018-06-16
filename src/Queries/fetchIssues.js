@@ -13,10 +13,10 @@ query fetchIssues {
       title
       body
       htmlUrl
-    }
 
-    user {
-      avatar_url
+      user {
+        avatarURL
+      }
     }
   }
 }
