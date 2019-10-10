@@ -13,6 +13,7 @@ query fetchIssues {
       title
       body
       htmlUrl
+      state
 
       user {
         avatarURL
