@@ -1,24 +1,23 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
 export const fetchIssuesQuery = gql`
-query fetchIssues {
-  dashboard {
-    id
+  query fetchIssues {
+    dashboard {
+      id
 
-    language {
-      name
-    }
+      language {
+        name
+      }
 
-    issues {
-      title
-      body
-      htmlUrl
-      state
+      issues(states: OPEN) {
+        title
+        body
+        htmlUrl
 
-      user {
-        avatarURL
+        user {
+          avatarURL
+        }
       }
     }
   }
-}
 `;
